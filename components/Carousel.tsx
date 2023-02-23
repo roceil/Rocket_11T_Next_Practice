@@ -1,6 +1,7 @@
 import Image from 'next/image'
+import { IBannerProps } from '@/types/interface'
 
-export function Carousel(props) {
+export function Carousel(props: IBannerProps) {
   return (
     <section className='recommendation' id='recommendation'>
       <div className='wrap'>
@@ -8,13 +9,23 @@ export function Carousel(props) {
         <div className='recommendation-wall'>
           <ul className='gallery-top'>
             <li className='recommendation-card'>
-              <img
+              <Image
+                priority
+                unoptimized={true}
+                width={96}
+                height={96}
+                loader={props.customLoader}
                 src='https://i.imgur.com/cXcOLhu.png'
                 alt=''
               />
               <div className='recommend-content'>
                 <div className='recommend-img'>
-                  <img
+                  <Image
+                  priority
+                  unoptimized={true}
+                    width={40}
+                    height={40}
+                    loader={props.customLoader}
                     src='https://i.imgur.com/I9L7WOr.png'
                     alt=''
                   />
@@ -27,13 +38,23 @@ export function Carousel(props) {
               </div>
             </li>
             <li className='recommendation-card'>
-              <img
+              <Image
+              priority
+              unoptimized={true}
+                width={96}
+                height={96}
+                loader={props.customLoader}
                 src='https://i.imgur.com/BefHmH2.png'
                 alt=''
               />
               <div className='recommend-content'>
                 <div className='recommend-img'>
-                  <img
+                  <Image
+                  priority
+                  unoptimized={true}
+                    width={40}
+                    height={40}
+                    loader={props.customLoader}
                     src='https://i.imgur.com/CUFGfay.png'
                     alt=''
                   />
@@ -46,13 +67,23 @@ export function Carousel(props) {
               </div>
             </li>
             <li className='recommendation-card'>
-              <img
+              <Image
+              priority
+              unoptimized={true}
+                width={96}
+                height={96}
+                loader={props.customLoader}
                 src='https://github.com/hexschool/js-training/blob/main/%E7%AC%AC%E4%B9%9D%E9%80%B1%E4%B8%BB%E7%B7%9A%E4%BB%BB%E5%8B%99%E5%9C%96%E5%BA%AB/3IATkJG.png?raw=true'
                 alt=''
               />
               <div className='recommend-content'>
                 <div className='recommend-img'>
-                  <img
+                  <Image
+                  priority
+                  unoptimized={true}
+                    width={40}
+                    height={40}
+                    loader={props.customLoader}
                     src='https://i.imgur.com/8WwZsLS.png'
                     alt=''
                   />
@@ -65,13 +96,23 @@ export function Carousel(props) {
               </div>
             </li>
             <li className='recommendation-card'>
-              <img
+              <Image
+              priority
+              unoptimized={true}
+                width={96}
+                height={96}
+                loader={props.customLoader}
                 src='https://i.imgur.com/HvT3zlU.png'
                 alt=''
               />
               <div className='recommend-content'>
                 <div className='recommend-img'>
-                  <img
+                  <Image
+                  priority
+                  unoptimized={true}
+                    width={40}
+                    height={40}
+                    loader={props.customLoader}
                     src='https://i.imgur.com/NycuPVy.png'
                     alt=''
                   />
@@ -84,13 +125,23 @@ export function Carousel(props) {
               </div>
             </li>
             <li className='recommendation-card'>
-              <img
+              <Image
+              priority
+              unoptimized={true}
+                width={96}
+                height={96}
+                loader={props.customLoader}
                 src='https://i.imgur.com/Ed7bxLr.png'
                 alt=''
               />
               <div className='recommend-content'>
                 <div className='recommend-img'>
-                  <img
+                  <Image
+                  priority
+                  unoptimized={true}
+                    width={40}
+                    height={40}
+                    loader={props.customLoader}
                     src='https://i.imgur.com/zdFOQIv.png'
                     alt=''
                   />
@@ -105,13 +156,23 @@ export function Carousel(props) {
           </ul>
           <ul className='gallery-bottom'>
             <li className='recommendation-card'>
-              <img
+              <Image
+              priority
+              unoptimized={true}
+                width={96}
+                height={96}
+                loader={props.customLoader}
                 src='https://i.imgur.com/BefHmH2.png'
                 alt=''
               />
               <div className='recommend-content'>
                 <div className='recommend-img'>
-                  <img
+                  <Image
+                  priority
+                  unoptimized={true}
+                    width={40}
+                    height={40}
+                    loader={props.customLoader}
                     src='https://i.imgur.com/W7fyzp2.png'
                     alt=''
                   />
@@ -124,13 +185,23 @@ export function Carousel(props) {
               </div>
             </li>
             <li className='recommendation-card'>
-              <img
+              <Image
+              priority
+              unoptimized={true}
+                width={96}
+                height={96}
+                loader={props.customLoader}
                 src='https://i.imgur.com/mjA01Tk.png'
                 alt=''
               />
               <div className='recommend-content'>
                 <div className='recommend-img'>
-                  <img
+                  <Image
+                  priority
+                  unoptimized={true}
+                    width={40}
+                    height={40}
+                    loader={props.customLoader}
                     src='https://github.com/hexschool/js-training/blob/main/%E7%AC%AC%E4%B9%9D%E9%80%B1%E4%B8%BB%E7%B7%9A%E4%BB%BB%E5%8B%99%E5%9C%96%E5%BA%AB/8O1cOnG.png?raw=true'
                     alt=''
                   />
@@ -143,13 +214,23 @@ export function Carousel(props) {
               </div>
             </li>
             <li className='recommendation-card'>
-              <img
+              <Image
+              priority
+              unoptimized={true}
+                width={96}
+                height={96}
+                loader={props.customLoader}
                 src='https://i.imgur.com/npA3DgP.png'
                 alt=''
               />
               <div className='recommend-content'>
                 <div className='recommend-img'>
-                  <img
+                  <Image
+                  priority
+                  unoptimized={true}
+                    width={40}
+                    height={40}
+                    loader={props.customLoader}
                     src='https://i.imgur.com/C0NDvSA.png'
                     alt=''
                   />
@@ -162,13 +243,23 @@ export function Carousel(props) {
               </div>
             </li>
             <li className='recommendation-card'>
-              <img
+              <Image
+              priority
+              unoptimized={true}
+                width={96}
+                height={96}
+                loader={props.customLoader}
                 src='https://i.imgur.com/Ed7bxLr.png'
                 alt=''
               />
               <div className='recommend-content'>
                 <div className='recommend-img'>
-                  <img
+                  <Image
+                  priority
+                  unoptimized={true}
+                    width={40}
+                    height={40}
+                    loader={props.customLoader}
                     src='https://i.imgur.com/hUsTZDm.png'
                     alt=''
                   />
@@ -181,13 +272,23 @@ export function Carousel(props) {
               </div>
             </li>
             <li className='recommendation-card'>
-              <img
+              <Image
+              priority
+              unoptimized={true}
+                width={96}
+                height={96}
+                loader={props.customLoader}
                 src='https://i.imgur.com/mjA01Tk.png'
                 alt=''
               />
               <div className='recommend-content'>
                 <div className='recommend-img'>
-                  <img
+                  <Image
+                  priority
+                  unoptimized={true}
+                    width={40}
+                    height={40}
+                    loader={props.customLoader}
                     src='https://github.com/hexschool/js-training/blob/main/%E7%AC%AC%E4%B9%9D%E9%80%B1%E4%B8%BB%E7%B7%9A%E4%BB%BB%E5%8B%99%E5%9C%96%E5%BA%AB/3ako6QX.png?raw=true'
                     alt=''
                   />

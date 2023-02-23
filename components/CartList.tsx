@@ -1,12 +1,13 @@
 import Image from 'next/image'
+import { ICartListProps, DeleteAllMessage } from '@/types/interface'
 import { deleteAll, deleteItem } from '../lib/APIs'
 
 
 
-export function CartList({ customLoader, carts, setShopCart }) {
+export function CartList({ customLoader, carts, setShopCart }: ICartListProps) {
   let finalPrice = 0
   const handleDeleteAll = async () => {
-    const result = await deleteAll()
+    const result: DeleteAllMessage = await deleteAll()
     if (result?.status === 200) {
       setShopCart([])
       alert(result.message)
@@ -42,7 +43,10 @@ export function CartList({ customLoader, carts, setShopCart }) {
               >
                 {/* 品項 */}
                 <td className='flex space-x-[15px] items-center'>
-                  <img
+                  <Image
+                    width={80}
+                    height={80}
+                    loader={customLoader}
                     src={images}
                     alt={title}
                   />

@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { OrderLabel } from './OrderLabel'
 import { OrderSelection } from './OrderSelection'
+import { IOrderFormProps } from '@/types/interface'
 import { sendOrder } from '@/lib/APIs'
 
 const orderFormData = [
@@ -30,7 +31,7 @@ const orderFormData = [
   }
 ]
 
-export function OrderForm({ setShopCart }) {
+export function OrderForm({ setShopCart }: IOrderFormProps) {
   const {
     register,
     handleSubmit,

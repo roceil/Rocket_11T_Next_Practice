@@ -2,15 +2,12 @@ import axios from 'axios'
 
 export const addToCart = async (productId: string) => {
   try {
-    const res = await axios.post(
-      `https://livejs-api.hexschool.io/api/livejs/v1/customer/rocket-frank/carts`,
-      {
-        data: {
-          productId: productId,
-          quantity: 1
-        }
+    const res = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/carts`, {
+      data: {
+        productId: productId,
+        quantity: 1
       }
-    )
+    })
     const result = await res.data.carts
     alert('加入成功')
     return result
@@ -21,9 +18,7 @@ export const addToCart = async (productId: string) => {
 
 export const deleteAll = async () => {
   try {
-    const res = await axios.delete(
-      `https://livejs-api.hexschool.io/api/livejs/v1/customer/rocket-frank/carts`
-    )
+    const res = await axios.delete(`${process.env.NEXT_PUBLIC_BASE_URL}/carts`)
     const { message } = await res.data
     const { status } = await res
     return { message, status }
@@ -36,7 +31,7 @@ export const deleteAll = async () => {
 export const deleteItem = async (id: string) => {
   try {
     const res = await axios.delete(
-      `https://livejs-api.hexschool.io/api/livejs/v1/customer/rocket-frank/carts/${id}`
+      `${process.env.NEXT_PUBLIC_BASE_URL}/carts/${id}`
     )
     const { carts } = await res.data
     alert('刪除成功')
@@ -54,20 +49,17 @@ export const sendOrder = async (
   payWays: string
 ) => {
   try {
-    const res = await axios.post(
-      'https://livejs-api.hexschool.io/api/livejs/v1/customer/rocket-frank/orders',
-      {
-        data: {
-          user: {
-            name: name,
-            tel: phone,
-            email: email,
-            address: address,
-            payment: payWays
-          }
+    const res = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/orders`, {
+      data: {
+        user: {
+          name: name,
+          tel: phone,
+          email: email,
+          address: address,
+          payment: payWays
         }
       }
-    )
+    })
     const { status } = await res
     return status
   } catch (error: any) {

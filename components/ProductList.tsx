@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import { IProductListProps, ProductData } from '@/types/interface'
+import { addToCart } from '../lib/APIs'
 
 export function ProductList({
   customLoader,
@@ -6,14 +8,14 @@ export function ProductList({
   allProducts,
   setShopCart,
   setAllProduct
-}) {
+}: IProductListProps) {
   const handleSelect = (e: { target: { value: string } }) => {
     let keyword = e.target.value
     if (keyword === '全部') {
       setAllProduct(originProduct)
       return
     }
-    const result = originProduct.filter((productsData) => {
+    const result = originProduct.filter((productsData: ProductData) => {
       return keyword === productsData.category
     })
     setAllProduct(result)
@@ -29,11 +31,14 @@ export function ProductList({
         <option value='窗簾'>窗簾</option>
       </select>
       <ul className='productWrap'>
-        {allProducts.map((productsData) => {
+        {allProducts.map((productsData: ProductData) => {
           return (
             <li key={productsData.id} className='productCard'>
               <h4 className='productType'>新品</h4>
-              <img
+              <Image
+                width={232.75}
+                height={300}
+                loader={customLoader}
                 src={productsData.images}
                 alt={productsData.title}
               />
